@@ -1,0 +1,64 @@
+body{
+  background-color: #00AE3B;
+}
+
+.container{
+  text-align: center;
+}
+
+.refresh-icon{
+  position: relative;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  width: 100px;
+  transition: 0.2s;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  &:focus{
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  svg{
+    path{
+      stroke: #fff;
+      stroke-width: 5px;
+      stroke-linecap: round;
+      fill: none;
+    }
+    &.arrow-svg{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      transform: rotate(-40deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}
+
+.arrow-animation{
+  animation-name: rotation;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotate(-40deg);
+  }
+  80% {
+    transform: rotate(340deg);
+  }
+  99.999%{
+    transform: rotate(460deg);
+  }
+  to{
+    transform: rotate(-40deg);
+  }
+}
